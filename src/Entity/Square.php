@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Entity;
+
 use Symfony\Component\Validator\Constraints as Assert;
 use App\Repository\SquareRepository;
 use App\Services\Interface\FigureInterface;
@@ -49,7 +50,7 @@ class Square implements FigureInterface
 
     public function setSurface(): static
     {
-        $this->surface =round(pow($this->sideLenght , 2),2);
+        $this->surface = round(pow($this->sideLenght, 2), 2);
 
         return $this;
     }
@@ -61,7 +62,7 @@ class Square implements FigureInterface
 
     public function setPerimeter(): static
     {
-        $this->perimeter = round((4*$this->sideLenght),2);
+        $this->perimeter = round((4 * $this->sideLenght), 2);
 
         return $this;
     }
