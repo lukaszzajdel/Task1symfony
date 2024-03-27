@@ -42,25 +42,25 @@ class Circle implements FigureInterface
         return $this;
     }
 
-    public function getSurface(): ?float
+    public function getSurface(): float
     {
         return $this->surface;
     }
 
     public function setSurface(): static
     {
-       $this->surface =   M_PI * $this->radius * $this->radius;
+       $this->surface =   round(M_PI * pow($this->radius,2),2);
        return $this;
     }
 
-    public function getPerimeter(): ?float
+    public function getPerimeter(): float
     {
         return  $this->perimeter;
     }
 
     public function setPerimeter(): static
     {
-        $this->perimeter = 2 * M_PI * $this->radius ;
+        $this->perimeter = round((2 * M_PI * $this->radius),2) ;
         return $this;
     }
 }

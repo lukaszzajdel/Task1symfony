@@ -27,6 +27,13 @@ class CircleRepository extends ServiceEntityRepository
         $this->getEntityManager()->flush();
     }
 
+    public function delete(Circle $circle)
+    {
+        $this->getEntityManager()->remove($circle);
+        $this->getEntityManager()->flush();
+    }
+
+
     //    /**
     //     * @return Circle[] Returns an array of Circle objects
     //     */
@@ -42,13 +49,12 @@ class CircleRepository extends ServiceEntityRepository
     //        ;
     //    }
 
-    //    public function findOneBySomeField($value): ?Circle
-    //    {
-    //        return $this->createQueryBuilder('c')
-    //            ->andWhere('c.exampleField = :val')
-    //            ->setParameter('val', $value)
-    //            ->getQuery()
-    //            ->getOneOrNullResult()
-    //        ;
-    //    }
+    // public function findOneById(int $id): ?Circle
+    // {
+    //     return $this->createQueryBuilder('s')
+    //         ->andWhere('s.id = :val')
+    //         ->setParameter('val', $id)
+    //         ->getQuery()
+    //         ->getOneOrNullResult();
+    // }
 }

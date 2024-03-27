@@ -6,7 +6,7 @@ namespace App\Services\Interface;
 
 interface FigureInterface
 {
-    public function getPerimeter();
+    public function getPerimeter():float;
 
-    public function getSurface();
+    public function getSurface():float;
 }
